@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerNewsApi.Api", "HackerNewsApi.Api\HackerNewsApi.Api.csproj", "{0F99FB5F-6A83-42DA-AE11-EDD467F5D1A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerNewsApi.Services", "HackerNewsApi.Services\HackerNewsApi.Services.csproj", "{5BC3958A-0D35-4DB6-A499-91823A4A95D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerNewsApi.Data", "HackerNewsApi.Data\HackerNewsApi.Data.csproj", "{4C0613E7-5C74-4E92-AD3B-01BF16583397}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{96AC1544-2238-4622-81CB-170361895923}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F99FB5F-6A83-42DA-AE11-EDD467F5D1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F99FB5F-6A83-42DA-AE11-EDD467F5D1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F99FB5F-6A83-42DA-AE11-EDD467F5D1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F99FB5F-6A83-42DA-AE11-EDD467F5D1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC3958A-0D35-4DB6-A499-91823A4A95D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC3958A-0D35-4DB6-A499-91823A4A95D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC3958A-0D35-4DB6-A499-91823A4A95D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC3958A-0D35-4DB6-A499-91823A4A95D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C0613E7-5C74-4E92-AD3B-01BF16583397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0613E7-5C74-4E92-AD3B-01BF16583397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0613E7-5C74-4E92-AD3B-01BF16583397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0613E7-5C74-4E92-AD3B-01BF16583397}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
