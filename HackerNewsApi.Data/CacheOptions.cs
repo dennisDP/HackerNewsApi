@@ -2,5 +2,6 @@
 
 public class CacheOptions
 {
-    public int ExpirationTimeMinutes { get; set; }
+    public int StoryIdsExpirationTimeMinutes { get; set; }
+    public int StoryExpirationTimeMinutes { get; set; }
 }

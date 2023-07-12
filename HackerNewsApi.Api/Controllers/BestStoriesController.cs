@@ -1,34 +1,30 @@
+using HackerNewsApi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HackerNewsApi.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("/api")]
 [AllowAnonymous]
+[Produces("application/json")]
 public class BestStoriesController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
+    private readonly IHackerNewsService _hackerNewsService;
     private readonly ILogger<BestStoriesController> _logger;
 
-    public BestStoriesController(ILogger<BestStoriesController> logger)
+    public BestStoriesController(ILogger<BestStoriesController> logger, IHackerNewsService hackerNewsService)
     {
         _logger = logger;
+        _hackerNewsService = hackerNewsService;
     }
 
-    [HttpGet(Name = "GetBestStories")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpGet("best-stories/{limit}", Name = "BestStories_Get")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> Get(int limit)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        _logger.LogInformation("Getting {0} best HackerNews stories", limit);
+        var result = await _hackerNewsService.GetBestStories(limit);
+        return Ok(result);
     }
 }

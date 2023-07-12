@@ -4,5 +4,5 @@ namespace HackerNewsApi.Services;
 
 public interface IHackerNewsService
 {
-    Task<HackerNewsStory[]> GetBestStories(int limit); 
+    Task<List<HackerNewsStory>> GetBestStories(int limit);
 }

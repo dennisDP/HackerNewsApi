@@ -8,11 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\HackerNewsApi.Services\HackerNewsApi.Services.csproj" />
+        <ProjectReference Include="..\HackerNewsApi.Services\HackerNewsApi.Services.csproj"/>
     </ItemGroup>
 
 </Project>

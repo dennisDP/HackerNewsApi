@@ -1,14 +1,24 @@
-﻿namespace HackerNewsApi.Data.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace HackerNewsApi.Data.Models;
 
 public class HackerNewsStory
 {
-    public string By { get; set; }
-    public int Descendants { get; set; }
-    public int Id { get; set; }
-    public List<int> Kids { get; set; }
-    public int Score { get; set; }
-    public int Time { get; set; }
-    public string Title { get; set; }
-    public string Type { get; set; }
-    public string Url { get; set; }
+    [JsonPropertyName("by")] public string? By { get; set; }
+
+    [JsonPropertyName("descendants")] public int Descendants { get; set; }
+
+    [JsonPropertyName("id")] public int Id { get; set; }
+
+    [JsonPropertyName("kids")] public int[]? Kids { get; set; }
+
+    [JsonPropertyName("score")] public int Score { get; set; }
+
+    [JsonPropertyName("time")] public int Time { get; set; }
+
+    [JsonPropertyName("title")] public string? Title { get; set; }
+
+    [JsonPropertyName("type")] public string? Type { get; set; }
+
+    [JsonPropertyName("url")] public string? Url { get; set; }
 }
