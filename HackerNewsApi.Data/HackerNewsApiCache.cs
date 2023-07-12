@@ -7,12 +7,13 @@ namespace HackerNewsApi.Data;
 
 public class HackerNewsApiCache : IHackerNewsApiCache
 {
-    private readonly ILogger<HackerNewsApiCache> _logger;
     private readonly IHackerNewsApiClient _apiClient;
     private readonly IMemoryCache _cache;
     private readonly CacheOptions _cacheOptions;
+    private readonly ILogger<HackerNewsApiCache> _logger;
 
-    public HackerNewsApiCache(IHackerNewsApiClient apiClient, IMemoryCache cache, IOptions<CacheOptions> cacheOptions, ILogger<HackerNewsApiCache> logger)
+    public HackerNewsApiCache(IHackerNewsApiClient apiClient, IMemoryCache cache, IOptions<CacheOptions> cacheOptions,
+        ILogger<HackerNewsApiCache> logger)
     {
         _apiClient = apiClient;
         _cache = cache;
